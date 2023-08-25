@@ -1,38 +1,130 @@
+/* Common styles for all screen sizes */
 .App {
   text-align: center;
+  background-color: red;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.menu-title {
+  padding-bottom: 90px;
+  padding: 50px 0 60px 10px;
+  position: relative;
+}
+
+.menu-title::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 60px;
+  width: 150px;
+  height: 14px;
+  transform: skew(-12deg) translateX(-50%);
+  background: #fcbf10;
+  z-index: -1;
+}
+
+.card-body {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  height: 200px;
+  padding: 10px;
+}
+
+.custom-card-content {
+  align-items: ltr;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+/* CSS Styles */
+.header {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 10px; /* Add padding for spacing */
+  border: none; /* Remove any border */
+}
+
+.card-title {
+  margin: 0;
+}
+
+.card-price {
+  margin: 0;
+  background-color: #f59e0b;
   color: white;
+  border-radius: 5px;
+  font-weight: bold;
+  padding: 5px;
 }
 
-.App-link {
-  color: #61dafb;
+.card-text {
+  padding-top: 30px;
+  direction: ltr;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.card-body {
+  padding-top: 30px;
+}
+.card-img-custom {
+  width: 100%; /* Use full width for images */
+  height: 70%; /* Set a fixed height for the card images */
+  object-fit: cover;
+}
+
+.footer {
+  justify-content: center;
+  position: absolute;
+}
+
+/* Responsive rules for different screen sizes */
+
+@media screen and (max-width: 768px) {
+  img {
+    width: 100%;
   }
-  to {
-    transform: rotate(360deg);
+  .container {
+    max-width: 100%;
+    width: 100%;
+  }
+  .col-md-3 {
+    width: 100%;
+    float: left;
+    margin: 0;
+  }
+}
+
+/* Media query for small screens (up to 576px) */
+@media (max-width: 576px) {
+  .card {
+    /* Adjust styles for small screens */
+  }
+}
+
+/* Media query for medium screens (between 577px and 992px) */
+@media (min-width: 577px) and (max-width: 992px) {
+  .card {
+    /* Adjust styles for medium screens */
+  }
+}
+
+/* Media query for large screens (above 992px) */
+@media (min-width: 993px) {
+  .card {
+    /* Adjust styles for large screens */
   }
 }
