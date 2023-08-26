@@ -3,7 +3,7 @@ import classes from "../components/Footer.module.css";
 
 function Header() {
   var hour = new Date().getHours();
-  let openHour = 20;
+  let openHour = 12;
   let closeHour = 20;
   let isOpen = hour >= openHour && hour < closeHour;
   return (
